@@ -103,7 +103,9 @@
     .header {
         padding: 15px 20px;
     }
-
+    .auth-buttons{
+        display: width 100%;
+    }
     .nav-container {
         position: static;
         display: none;
@@ -148,7 +150,12 @@
         height: auto;
         aspect-ratio: 1/1;
     }
-
+    .auth-buttons{
+        display: width 100%;
+    }
+    .mobile-menu-btn {
+        display: none;
+    }
     .products-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
@@ -230,10 +237,6 @@
         position: static;
         display: none;
     }
-    .auth-buttons {
-        padding: 0;
-    }
-
     .login-btn,
     .register-btn {
         font-size: 18px;
@@ -242,6 +245,7 @@
     .register-btn {
         padding: 8px 16px;
     }
+    
 
     .interior-section {
         flex-direction: column;
@@ -372,7 +376,9 @@
     .logo-text {
         font-size: 18px;
     }
-
+    .auth-buttons{
+        display: none;
+    }
     .interior-section {
         padding: 15px;
     }
