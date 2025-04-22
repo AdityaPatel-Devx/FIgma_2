@@ -1,0 +1,43 @@
+  /* Mission Section */
+  .mission {
+    max-width: 100%;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+  }
+  .mission-sub {
+    color: #2b3c87;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .mission h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 56px;
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+  .bold-italic {
+    font-style: italic;
+    font-weight: 700;
+  }
+  .mission-paragraph {
+    max-width: 1500px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 50;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .promo-section {
+      flex-direction: column;
+    }
+    .promo-image,
+    .promo-text {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    
+  }

@@ -1,0 +1,16 @@
+/* Announcement Bar */
+.announcement {
+    background-color: #1e1f3b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 100;
+  }
+  .announcement a {
+    color: #ffffff;
+    font-weight: 600
+    ;
+  }

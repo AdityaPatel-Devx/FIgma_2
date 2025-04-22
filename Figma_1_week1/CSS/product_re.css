@@ -1,0 +1,50 @@
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .feature-main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    flex: 1;
+  }
+
+  .feature-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;;
+  }
+  
+  .feature-text-item p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #222;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .feature-grid {
+      flex-direction: column;
+    }
+    .feature-main 
+    .feature-text-item {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    .feature-text-item p {
+      font-size: 1.3rem;
+    }
+  }
+  
+
+

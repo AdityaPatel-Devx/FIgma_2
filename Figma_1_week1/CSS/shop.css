@@ -1,0 +1,75 @@
+
+
+/* HERO CTA */
+.hero-cta {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f8fafc;
+  max-width: 100%;
+}
+.hero-cta h1 {
+  font-size: 3rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+.btn-shop-all {
+  display: inline-block;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  display: flex;
+  min-height: 60vh;
+}
+
+/* Left panel: shop interior background */
+.contact-image {
+  flex: 1;
+  background: url('d67c00819bc4c8951e8f1744272b8647.jpeg')center/cover no-repeat;
+}
+
+/* Right panel: navy background with golden text */
+.contact-info {
+  flex: 1;
+  background: #0f172a;
+  color: #fbbf24;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-info p {
+  color: #fff;
+  margin-bottom: 2rem;
+  max-width: 20rem;
+}
+.btn-appointment {
+  text-decoration: none;
+  color: #fbbf24;
+  font-size: 1rem;
+  border-bottom: 1px solid #fbbf24;
+  padding-bottom: 0.25rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-image {
+    min-height: 40vh;
+  }
+}

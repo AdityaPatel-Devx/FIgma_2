@@ -1,0 +1,32 @@
+/* carousel */
+.carousel-container {
+    background-color: #1e1f3b;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.carousel-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-horizontal 10s linear infinite;
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.carousel-item {
+    color: white;
+    display: inline-block;
+    margin: 0 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-family: Inter, sans-serif;;
+}
+
+@keyframes scroll-horizontal {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}

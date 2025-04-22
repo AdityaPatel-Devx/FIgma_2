@@ -1,0 +1,388 @@
+.feedback-section {
+    margin: 60px auto;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.feedback-section h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.feedback-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feedback-card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+}
+
+.feedback-stars {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.feedback-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.feedback-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 16px;
+}
+
+.author-role {
+    font-size: 12px;
+    color: #777;
+}
+
+
+@media (max-width: 1024px) {
+    .feedback-section h2 {
+        font-size: 26px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .feedback-section h2 {
+        font-size: 22px;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .product-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .product-title {
+        font-size: 24px;
+    }
+
+    .stars,
+    .product-price {
+        font-size: 20px;
+    }
+
+    .content-section,
+    .image-section {
+        max-width: 100%;
+    }
+
+    .image-section {
+        margin-top: 40px;
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .interior-section {
+        padding: 30px;
+    }
+
+    .content h1 {
+        font-size: 54px;
+        line-height: 58px;
+    }
+
+    .content p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .features-section {
+        margin: 0 30px;
+    }
+
+    .content-heading {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .content-description {
+        font-size: 18px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feedback-grid {
+        flex-wrap: wrap;
+    }
+
+    .feedback-card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo-text {
+        font-size: 24px;
+    }
+
+    .nav-container {
+        position: static;
+        display: none;
+    }
+    .auth-buttons {
+        padding: 0;
+    }
+
+    .login-btn,
+    .register-btn {
+        font-size: 18px;
+    }
+
+    .register-btn {
+        padding: 8px 16px;
+    }
+
+    .interior-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .content h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+
+    .features-section {
+        flex-direction: column;
+        margin: 0px 20px;
+        padding: 30px 10px;
+    }
+
+    .feature-block {
+        margin: 15px 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cozy-section {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .rounded-image {
+        margin-bottom: 30px;
+    }
+
+    .content-container {
+        padding: 0;
+        text-align: center;
+    }
+
+    .content-heading {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .content-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-block {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .products-section h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-section {
+        text-align: center;
+    }
+
+    .services-lists {
+        justify-content: center;
+    }
+
+    .services-list {
+        text-align: left;
+    }
+
+    .partners-section {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .partner-logo {
+        height: 40px;
+    }
+
+    .feedback-section h2 {
+        font-size: 30px;
+    }
+
+    .feedback-grid {
+        flex-direction: column;
+    }
+
+    .feedback-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .logo-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .interior-section {
+        padding: 15px;
+    }
+
+    .content h1 {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+
+    .content p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+
+    .explore-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .features-section {
+        padding: 20px 10px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .feature-description {
+        font-size: 14px;
+    }
+
+    .content-heading {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .content-description {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-text {
+        font-size: 14px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+
+    .stars,
+    .product-price {
+        font-size: 16px;
+    }
+
+    .feedback-section h2 {
+        font-size: 24px;
+    }
+
+    .footer .footer-logo-text {
+        font-size: 18px;
+    }
+
+    .footer .footer-description-text {
+        font-size: 14px;
+    }
+
+    .footer .footer-links-section-title {
+        font-size: 16px;
+    }
+}
