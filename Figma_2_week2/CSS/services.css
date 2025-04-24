@@ -1,16 +1,17 @@
 .services {
-    margin: 0 60px;
-    padding: 80px 20px;
+    padding: 80px 120px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap : 185px;
     background-color: #F6F6F6;
 }
 
 .content-section {
     width: 100%;
     max-width: 550px;
-    padding-right: 20px;
+    padding: 0px 60px;
+    align-content: center;
 }
 
 .image-section {
@@ -19,8 +20,8 @@
     height: 500px;
 }
 
-.image-section img {
-    width: 100%;
+.image-section .img {
+    max-width: fit-content;
     height: 100%;
     object-fit: cover;
     border-radius: 2px;
@@ -106,13 +107,15 @@ h1 {
 }
 
 .partner-logo {
-    height: 80px;
-    margin: 10px;
     flex: 0 1 auto;
 }
 
 /* Enhanced Media Queries */
 @media (max-width: 1024px) {
+    .services {
+        padding: 40px 120px;
+        justify-content: space-between ;
+    }
 
     .content-section,
     .image-section {
@@ -127,14 +130,11 @@ h1 {
 
 @media (max-width: 768px) {
     .services {
-        padding: 40px 20px;
+        padding: 40px 120px;
     }
 
     h1 {
         font-size: 32px;
-    }
-    .services-list {
-        display: none;
     }
     .description {
         font-size: 16px;
@@ -142,7 +142,6 @@ h1 {
     .service-item li {
         font-size: 15px;
     }
-
     .services-section {
         text-align: center;
     }
@@ -153,6 +152,7 @@ h1 {
 
     .services-list {
         text-align: left;
+        display: none;
     }
 
     .image-section {
@@ -161,6 +161,9 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    .services {
+        padding: 20px 120px;
+    }
     .service-column {
         width: 100%;
     }

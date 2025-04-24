@@ -1,349 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cakls - Interior Design & Furniture</title>
-    <link rel="stylesheet" href="rought.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/Figma_2_week2/css/rought.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services & Benefits</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .services-section {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+      background-color: aquamarine;
+    }
+
+    .services-content {
+      flex: 1;
+    }
+
+    .services-image {
+      flex: 1;
+    }
+
+    .services-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .services-lists {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .services-list {
+      flex: 1;
+    }
+
+    .services-list ul {
+      list-style: none;
+    }
+
+    .services-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .services-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #333;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #e97373;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #d56565;
+    }
+
+    .play-icon {
+      margin-right: 8px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .services-section {
+        flex-direction: column;
+      }
+
+      .services-image {
+        order: -1;
+        margin-bottom: 30px;
+      }
+
+      .services-lists {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <a href="#" class="logo">
-            <div class="logo-icon"></div>
-            <span>Cakls</span>
-        </a>
-
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Why Us</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Gallery</a></li>
+  <div class="container">
+    <div class="services-section">
+      <div class="services-content">
+        <h1>Our Services & Benefits</h1>
+        <p>We are working on this commercial service since 2000. Almost 21 of out business service. And we almost works with 100k+ organisations and top related furniture and event service in USA.</p>
+        
+        <div class="services-lists">
+          <div class="services-list">
+            <ul>
+              <li>Interior Strategy</li>
+              <li>Update Designs</li>
+              <li>Event Decoration</li>
             </ul>
-        </nav>
-
-        <div class="auth-buttons">
-            <a href="#" class="login-btn">Log in</a>
-            <a href="#" class="register-btn">Register</a>
+          </div>
+          <div class="services-list">
+            <ul>
+              <li>21 Years Experience</li>
+              <li>Creative Designer</li>
+              <li>Interior Architecture</li>
+            </ul>
+          </div>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Refining the tone<br>of your space</h1>
-            <p>A chair with a high back will provide optimum comfort. The fashionable design of the chair will allow you
-                to decorate any room at home, kitchens, restaurants</p>
-            <a href="#" class="explore-btn">
-                Explore now
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                </svg>
-            </a>
-        </div>
-
-        <div class="hero-image">
-            <img src="/Figma_2_week2/images/image_1.png" alt="Modern interior with stylish furniture">
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="feature-block">
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="1" y="3" width="15" height="13"></rect>
-                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                </svg>
-            </div>
-            <h3 class="feature-title">Fast Delivery on time</h3>
-            <p class="feature-description">The delivery timeline may vary from 3 days to 36 days</p>
-        </div>
-
-        <div class="feature-block">
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                </svg>
-            </div>
-            <h3 class="feature-title">Perfect home design studio</h3>
-            <p class="feature-description">Our experienced assemblers will assemble your furniture on site within 24
-                hours</p>
-        </div>
-
-        <div class="feature-block">
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path
-                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                    </path>
-                </svg>
-            </div>
-            <h3 class="feature-title">Natural polytherine fabric</h3>
-            <p class="feature-description">We make a deliberate effort to study how people use spaces and what they do
-                in them</p>
-        </div>
-    </section>
-
-
-    <!-- Cozy Section -->
-    <section class="cozy-section">
-        <div class="cozy-image">
-            <img src="/Figma_2_week2/images/image_2.png" alt="Minimalist living room with green sofa">
-        </div>
-
-        <div class="cozy-content">
-            <h2>Cozy is a minimalist</h2>
-            <p>For create a cozy room, of course, the overall feel of the room must be warm. Therefore, the use of
-                beige, pastel or brown colors will really help to create this</p>
-
-            <div class="stats-container">
-                <div class="stat-block">
-                    <div class="stat-number">750+</div>
-                    <div class="stat-text">Furniture or home equipment</div>
-                </div>
-
-                <div class="stat-block">
-                    <div class="stat-number">150+</div>
-                    <div class="stat-text">Fresh interior design theme</div>
-                </div>
-
-                <div class="stat-block">
-                    <div class="stat-number">850+</div>
-                    <div class="stat-text">Happy client more for this</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products-section">
-        <h2>Top Sale Products</h2>
-
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="/Figma_2_week2/images/Product_1.png" alt="New Trendy Armchair">
-                </div>
-                <h3 class="product-title">New Trendy Armchair</h3>
-                <div class="stars">★★★★★</div>
-                <div class="product-price">$35.20</div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="/Figma_2_week2/images/Product_2.png" alt="New Matchapel Armchair">
-                </div>
-                <h3 class="product-title">New Matchapel Armchair</h3>
-                <div class="stars">★★★★★</div>
-                <div class="product-price">$35.20</div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="/Figma_2_week2/images/Product_3.png" alt="New Utespelare Armchair">
-                </div>
-                <h3 class="product-title">New Utespelare Armchair</h3>
-                <div class="stars">★★★★★</div>
-                <div class="product-price">$35.20</div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="/Figma_2_week2/images/Product_4.png" alt="New Trotten Armchair">
-                </div>
-                <h3 class="product-title">New Trotten Armchair</h3>
-                <div class="stars">★★★★★</div>
-                <div class="product-price">$35.20</div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="/Figma_2_week2/images/Product_5.png" alt="New Markus Armchair">
-                </div>
-                <h3 class="product-title">New Markus Armchair</h3>
-                <div class="stars">★★★★★</div>
-                <div class="product-price">$35.20</div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="/Figma_2_week2/images/Product_6.png" alt="New Loberget Armchair">
-                </div>
-                <h3 class="product-title">New Loberget Armchair</h3>
-                <div class="stars">★★★★★</div>
-                <div class="product-price">$35.20</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="services-content">
-            <h2>Our Services & Benefits</h2>
-
-            <p class="services-description">
-                We are working on this commercial service since 2000. Almost 21 of our business service. And we almost
-                works with 100+ organisations and top related furniture and event service in USA.
-            </p>
-
-            <div class="services-lists">
-                <ul class="services-list">
-                    <li>Interior Strategy</li>
-                    <li>Update Designs</li>
-                    <li>Event Decoration</li>
-                </ul>
-
-                <ul class="services-list">
-                    <li>21 Years Experience</li>
-                    <li>Creative Designer</li>
-                    <li>Interior Architecture</li>
-                </ul>
-            </div>
-
-            <button class="watch-video-btn">
-                Watch video
-            </button>
-        </div>
-
-        <div class="services-image">
-            <img src="/Figma_2_week2/images/service.png" alt="Interior design services">
-        </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section class="partners-section">
-        <img src="/Figma_2_week2/images/microsoft (1).png" alt="Microsoft" class="partner-logo">
-        <img src="/Figma_2_week2/images/decor.png" alt="Docck" class="partner-logo">
-        <img src="/Figma_2_week2/images/urbaninterior.png" alt="Urban" class="partner-logo">
-        <img src="/Figma_2_week2/images/hooker.png" alt="Hooker" class="partner-logo">
-        <img src="/Figma_2_week2/images/bassett.png" alt="Bassett" class="partner-logo">
-    </section>
-
-    <!-- Feedback Section -->
-    <section class="feedback-section">
-        <h2>Customers Feedback</h2>
-
-        <div class="feedback-grid">
-            <!-- Feedback 1 -->
-            <div class="feedback-card">
-                <div class="feedback-stars">★★★★★</div>
-                <p class="feedback-text">I orders before that them all good chair. Comfortable experience all buying,
-                    Product of all styles really of it styles really of it.</p>
-                <div class="feedback-author">
-                    <div class="author-avatar">
-                        <img src="/Figma_2_week2/images/Jhon.png" alt="John Taylor">
-                    </div>
-                    <div class="author-info">
-                        <h4>John Taylor</h4>
-                        <div class="author-role">CEO at Donates</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feedback 2 -->
-            <div class="feedback-card">
-                <div class="feedback-stars">★★★★★</div>
-                <p class="feedback-text">I orders before that them all good chair. Comfortable experience all buying,
-                    Product of all styles really of it styles really of it.</p>
-                <div class="feedback-author">
-                    <div class="author-avatar">
-                        <img src="/Figma_2_week2/images/John-2.png" alt="Jane Taylor">
-                    </div>
-                    <div class="author-info">
-                        <h4>Jane Taylor</h4>
-                        <div class="author-role">CEO at Donates</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feedback 3 -->
-            <div class="feedback-card">
-                <div class="feedback-stars">★★★★★</div>
-                <p class="feedback-text">I orders before that them all good chair. Comfortable experience all buying,
-                    Product of all styles really of it styles really of it.</p>
-                <div class="feedback-author">
-                    <div class="author-avatar">
-                        <img src="/Figma_2_week2/images/John_3.png" alt="John Taylor">
-                    </div>
-                    <div class="author-info">
-                        <h4>John Taylor</h4>
-                        <div class="author-role">CEO at Donates</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>COMPANY</h3>
-                <ul class="footer-links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>DEVELOPERS</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">API</a></li>
-                    <li><a href="#">Changelog</a></li>
-                    <li><a href="#">Status</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>CONNECT</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <div class="footer-logo">
-                    <div class="footer-logo-icon"></div>
-                    <span>Cakls</span>
-                </div>
-                <p style="font-size: 12px; margin-top: 15px; color: #777;">
-                    This site different from others website. For the normal site points this depends are as beautiful as
-                    they are directly.
-                </p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 Cakls. All rights reserved.</p>
-        </div>
-    </footer>
+        
+        <button class="cta-button">
+          <span class="play-icon">▶</span>
+          Watch Intro
+        </button>
+      </div>
+      
+      <div class="services-image">
+        <img src="Figma_2_week2/images/service.png" alt="Modern interior with stairs and plants">
+      </div>
+    </div>
+  </div>
 </body>
-
 </html>
