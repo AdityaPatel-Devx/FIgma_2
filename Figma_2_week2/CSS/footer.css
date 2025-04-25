@@ -46,12 +46,10 @@ footer {
   flex-wrap: wrap;
   gap: 55px 73px;
 }
-
 a {
   text-decoration: none;
   color: black
 }
-  
   @media screen and (min-width: 1404px) {
     .footer {
       display: flex;

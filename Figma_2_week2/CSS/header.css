@@ -1,4 +1,4 @@
-.header {
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,27 +8,27 @@
     position: relative;
 }
 
-.logo {
+.nav-bar-logo  {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
-.logo-icon {
+.nav-logo {
     width: 25px;
     height: 25px;
     background-color: #e57373;
     margin-right: 10px;
 }
 
-.logo-text {
+.nav-title{
     font-size: 30px;
     font-weight: bold;
     color: #333;
     font-weight: 600;
 }
 
-.nav-container {
+.nav-menu {
     position: absolute;
     left: 0;
     right: 0;
@@ -38,18 +38,18 @@
     /* Allow clicks to pass through to elements below */
 }
 
-.nav-links {
+.nav-menu-links {
     display: flex;
     list-style: none;
     pointer-events: auto;
     /* Re-enable clicks on the nav links */
 }
 
-.nav-links li {
+.nav-menu-links li {
     margin: 0 15px;
 }
 
-.nav-links a {
+.nav-menu-links a {
     text-decoration: none;
     color: #333;
     font-size: 24px;
@@ -58,7 +58,7 @@
     font-weight: 400;
 }
 
-.auth-buttons {
+.nav-buttons {
     display: flex;
     align-items: center;
     z-index: 1;
@@ -66,7 +66,7 @@
     padding: 0px 20px;
 }
 
-.login-btn {
+.nav-login-buttn {
     background: none;
     border: none;
     color: #333;
@@ -75,7 +75,7 @@
     margin-right: 15px;
 }
 
-.register-btn {
+.nav-reg-buttn {
     background-color: #e57373;
     color: white;
     border: none;
@@ -84,7 +84,7 @@
     cursor: pointer;
 }
 
-.mobile-menu-btn {
+.nav-mobile-menu {
     display: none;
     background: none;
     border: none;
@@ -94,24 +94,24 @@
 }
 
 @media (max-width: 950px) {
-    .nav-links li {
+    .nav-menu-links li {
         margin: 0 10px;
     }
 }
 
 @media (max-width: 768px) {
-    .header {
+    .nav-bar {
         padding: 15px 20px;
     }
-    .auth-buttons{
+    .nav-buttons{
         display: width 100%;
     }
-    .nav-container {
+    .nav-menu {
         position: static;
         display: none;
     }
 
-    .nav-container.active {
+    .nav-menu.active {
         position: absolute;
         top: 100%;
         left: 0;
@@ -122,23 +122,23 @@
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .nav-links {
+    .nav-menu-links {
         flex-direction: column;
         align-items: center;
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .nav-links li {
+    .nav-menu-links li {
         margin: 10px 0;
     }
 
-    .auth-buttons {
+    .nav-buttons {
         justify-content: right;
         width: 100%;
     }
 
-    .mobile-menu-btn {
+    .nav-mobile-menu {
         display: block;
     }
 }
@@ -150,310 +150,52 @@
         height: auto;
         aspect-ratio: 1/1;
     }
-    .auth-buttons{
+    .nav-buttons{
         display: width 100%;
     }
-    .mobile-menu-btn {
+    .nav-mobile-menu {
         display: none;
-    }
-    .products-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-
-    .product-title {
-        font-size: 24px;
-    }
-
-    .stars,
-    .product-price {
-        font-size: 20px;
-    }
-
-    .content-section,
-    .image-section {
-        max-width: 100%;
-    }
-
-    .image-section {
-        margin-top: 40px;
-        height: 400px;
-    }
-
-}
-
-@media (max-width: 992px) {
-    .interior-section {
-        padding: 30px;
-    }
-
-    .content h1 {
-        font-size: 54px;
-        line-height: 58px;
-    }
-
-    .content p {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .features-section {
-        margin: 0 30px;
-    }
-
-    .content-heading {
-        font-size: 38px;
-        line-height: 48px;
-    }
-
-    .content-description {
-        font-size: 18px;
-    }
-
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .feedback-grid {
-        flex-wrap: wrap;
-    }
-
-    .feedback-card {
-        flex: 1 1 45%;
     }
 }
 
 @media (max-width: 768px) {
-    .header {
+    .nav-bar {
         padding: 15px 20px;
         flex-wrap: wrap;
     }
 
-    .logo-text {
+    .nav-title{
         font-size: 24px;
     }
 
-    .nav-container {
+    .nav-menu {
         position: static;
         display: none;
     }
-    .login-btn,
-    .register-btn {
+    .nav-login-buttn,
+    .nav-reg-buttn {
         font-size: 18px;
     }
 
-    .register-btn {
+    .nav-reg-buttn {
         padding: 8px 16px;
-    }
-    
-
-    .interior-section {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .content {
-        max-width: 100%;
-        text-align: center;
-        padding: 0;
-        margin-bottom: 30px;
-    }
-
-    .content h1 {
-        font-size: 40px;
-        line-height: 44px;
-    }
-
-    .content p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .image-container {
-        max-width: 100%;
-    }
-
-    .features-section {
-        flex-direction: column;
-        margin: 0px 20px;
-        padding: 30px 10px;
-    }
-
-    .feature-block {
-        margin: 15px 0;
-        align-items: center;
-        text-align: center;
-    }
-
-    .cozy-section {
-        flex-direction: column;
-        padding: 30px 20px;
-    }
-
-    .rounded-image {
-        margin-bottom: 30px;
-    }
-
-    .content-container {
-        padding: 0;
-        text-align: center;
-    }
-
-    .content-heading {
-        font-size: 30px;
-        line-height: 38px;
-    }
-
-    .content-description {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .stats-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stat-block {
-        margin-right: 0;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .products-section h2 {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-section {
-        text-align: center;
-    }
-
-    .services-lists {
-        justify-content: center;
-    }
-
-    .services-list {
-        text-align: left;
-    }
-
-    .partners-section {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .partner-logo {
-        height: 40px;
-    }
-
-    .feedback-section h2 {
-        font-size: 30px;
-    }
-
-    .feedback-grid {
-        flex-direction: column;
-    }
-
-    .feedback-card {
-        margin-bottom: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .header {
+    .nav-bar {
         padding: 10px 15px;
     }
 
-    .logo-icon {
+    .nav-logo {
         width: 20px;
         height: 20px;
     }
 
-    .logo-text {
+    .nav-title{
         font-size: 18px;
     }
-    .auth-buttons{
+    .nav-buttons{
         display: none;
-    }
-    .interior-section {
-        padding: 15px;
-    }
-
-    .content h1 {
-        font-size: 32px;
-        line-height: 36px;
-        margin-bottom: 15px;
-    }
-
-    .content p {
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 25px;
-    }
-
-    .explore-btn {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    .features-section {
-        padding: 20px 10px;
-    }
-
-    .feature-title {
-        font-size: 18px;
-    }
-
-    .feature-description {
-        font-size: 14px;
-    }
-
-    .content-heading {
-        font-size: 24px;
-        line-height: 30px;
-        margin-bottom: 15px;
-    }
-
-    .content-description {
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 20px;
-    }
-
-    .stat-number {
-        font-size: 24px;
-    }
-
-    .stat-text {
-        font-size: 14px;
-    }
-
-    .product-title {
-        font-size: 18px;
-    }
-
-    .stars,
-    .product-price {
-        font-size: 16px;
-    }
-
-    .feedback-section h2 {
-        font-size: 24px;
-    }
-
-    .footer .footer-logo-text {
-        font-size: 18px;
-    }
-
-    .footer .footer-description-text {
-        font-size: 14px;
-    }
-
-    .footer .footer-links-section-title {
-        font-size: 16px;
     }
 }

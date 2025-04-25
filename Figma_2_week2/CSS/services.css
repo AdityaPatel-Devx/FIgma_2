@@ -3,74 +3,73 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap : 185px;
+    gap: 185px;
     background-color: #F6F6F6;
 }
 
-.content-section {
+.services .services-content {
     width: 100%;
     max-width: 550px;
-    padding: 0px 60px;
     align-content: center;
 }
 
-.image-section {
+.services .services-img {
     width: 100%;
     max-width: 550px;
     height: 500px;
 }
 
-.image-section .img {
+.services .services-img .img {
     max-width: fit-content;
     height: 100%;
     object-fit: cover;
     border-radius: 2px;
 }
 
-h1 {
+.services .services h1 {
     font-size: 42px;
     font-weight: 800;
     margin-bottom: 30px;
     color: #121212;
 }
 
-.description {
+.services .services-desc {
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 40px;
     color: #333;
 }
 
-.services-list {
+.services .services-lists {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
-.service-column {
+.services .services-col {
     width: 50%;
 }
 
-.service-item {
+.services .services-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.service-item li {
+.services .services-item li {
     list-style-type: none;
     font-size: 16px;
     font-weight: 500;
 }
 
-.service-item::before {
+.services .services-item::before {
     content: "•";
     color: #121212;
     font-size: 20px;
     margin-right: 10px;
 }
 
-.cta-button {
+.services .services-btn {
     display: inline-flex;
     align-items: center;
     background-color: #e97f7f;
@@ -85,11 +84,11 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.services .services-btn:hover {
     background-color: #d56c6c;
 }
 
-.play-icon {
+.services .services-btn-icon {
     margin-right: 8px;
 }
 
@@ -107,22 +106,24 @@ h1 {
 }
 
 .partner-logo {
+    margin: 10px;
     flex: 0 1 auto;
 }
+
 
 /* Enhanced Media Queries */
 @media (max-width: 1080px) {
     .services {
         padding: 40px 120px;
-        justify-content: space-between ;
+        justify-content: space-between;
     }
 
-    .content-section,
-    .image-section {
+    .services-content,
+    .services-img {
         max-width: 100%;
     }
 
-    .image-section {
+    .services .services-img {
         margin-top: 40px;
         height: 400px;
     }
@@ -133,30 +134,42 @@ h1 {
         padding: 40px 120px;
     }
 
-    h1 {
+    .services h1 {
         font-size: 32px;
     }
-    .description {
+
+    .services .services-desc {
         font-size: 16px;
     }
-    .service-item li {
+
+    .services .services-item li {
         font-size: 15px;
     }
-    .services-section {
+
+    .services .services-section {
         text-align: center;
     }
 
-    .services-lists {
+    .services .services-lists {
         justify-content: center;
     }
 
-    .services-list {
+    .services .services-lists {
         text-align: left;
         display: none;
     }
 
-    .image-section {
+    .services .services-img {
         height: 350px;
+    }
+
+    .partners-section {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .partner-logo {
+        height: 40px;
     }
 }
 
@@ -164,19 +177,20 @@ h1 {
     .services {
         padding: 20px 120px;
     }
-    .service-column {
+
+    .services .services-col {
         width: 100%;
     }
 
-    .services-list {
+    .services .services-lists {
         display: none;
     }
- 
-    h1 {
+
+    .services .services h1 {
         font-size: 28px;
     }
 
-    .image-section {
+    .services .services-img {
         height: 250px;
     }
 }
