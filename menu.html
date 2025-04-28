@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Toggle with Sticky Header</title>
+    <link rel="stylesheet" href=menu.css>
+</head>
+
+<body>
+    <div id="scrollProgress"></div>
+    <header id="mainHeader">
+        <div class="header-container">
+            <div class="logo">Meow</div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger Icon -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content-section">
+            <h1>Image Move and Change</h1>
+            <div class="image-container">
+                <img id="moveImage" src="photo-1573865526739-10659fec78a5.avif" alt="Move Image">
+            </div>
+
+            <div class="buttons">
+                <button class="shiny-button" onclick="moveImage('up')">Up</button>
+                <button class="shiny-button" onclick="moveImage('down')">Down</button>
+                <button class="shiny-button" onclick="moveImage('left')">Left</button>
+                <button class="shiny-button" onclick="moveImage('right')">Right</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>Modal Popup Example</h1>
+            <p>Click the button below to open the modal</p>
+            <button class="open-button" id="openModal">Open Modal</button>
+        </div>
+
+        <!-- Modal Overlay -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">Modal Title</h2>
+                    <button class="close-button" id="closeModalX">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content">
+                        <p>This is a modal popup that appears when you click the button.</p>
+                        <p>You can close it by:</p>
+                        <ul>
+                            <li>Clicking the X button</li>
+                            <li>Clicking outside the modal</li>
+                            <li>Clicking the Close button below</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-button secondary" id="closeModal">Close</button>
+                    <button class="modal-button">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <h1>Personal Information Form</h1>
+        <form id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                    <div id="nameError" class="error">Please enter your full name</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com">
+                    <div id="emailError" class="error">Please enter a valid email address</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                    <div id="phoneError" class="error">Please enter a valid phone number</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthDate">Birth Date*</label>
+                    <input type="date" id="birthDate" name="birthDate">
+                    <div id="birthDateError" class="error">Please select your birth date</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address*</label>
+                <textarea id="address" name="address" placeholder="123 Main St, City, Country"></textarea>
+                <div id="addressError" class="error">Please enter your address</div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="graduationYear">Year of Graduation*</label>
+                    <input type="number" id="graduationYear" name="graduationYear" placeholder="2020" min="1900"
+                        max="2099">
+                    <div id="graduationYearError" class="error">Please enter a valid graduation year</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Marital Status*</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="marriedYes" name="married" value="yes">
+                            <label for="marriedYes">Married</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="marriedNo" name="married" value="no">
+                            <label for="marriedNo">Single</label>
+                        </div>
+                    </div>
+                    <div id="marriedError" class="error">Please select your marital status</div>
+                </div>
+            </div>
+
+            <button type="submit">Submit Information</button>
+        </form>
+    </div>
+    <div class="tabs">
+        <!-- Tab Buttons -->
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="tab1">About Cats</button>
+            <button class="tab-button" data-tab="tab2">Cat Images</button>
+            <button class="tab-button" data-tab="tab3">Best Cats</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tab1" class="tab-content active">
+            <h2>Why Cats Are Awesome 🐾</h2>
+            <p>Cats are curious, playful, and loving companions. They have been with humans for thousands of years,
+                offering cuddles, entertainment, and a calming presence. Whether they're chasing a toy, snoozing in a
+                sunny spot, or simply purring on your lap, cats make every day brighter!</p>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <h2>Adorable Cats Gallery 😻</h2>
+            <div class="cat-images">
+                <img src="photo-1573865526739-10659fec78a5.avif" alt="Cute Kitten 1">
+                <img src="pexels-photo-2071882.jpeg" alt="Cute Kitten 2">
+            </div>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <h2>Top 5 Best Cat Breeds 🏆</h2>
+            <ul class="cat-list">
+                <li>Maine Coon — Gentle giant with a loving personality</li>
+                <li>Ragdoll — Known for their calm and docile nature</li>
+                <li>Siamese — Intelligent, social, and vocal</li>
+                <li>Persian — Gorgeous long-haired beauties</li>
+                <li>British Shorthair — Plush, easygoing companions</li>
+            </ul>
+        </div>
+    </div>
+
+    <button id="scrollTopBtn"></button>
+
+
+    <div class="section">
+        <h1>Welcome to the Cat Universe 🐱</h1>
+        <p>Cats have been our mysterious and adorable companions for thousands of years. From their silky fur to their
+            playful antics, they bring joy to millions across the globe.</p>
+    </div>
+
+    <div class="section">
+        <h1>The Power of a Purr 💖</h1>
+        <p>A cat's purr is more than just a cute sound. Studies show it can help reduce stress, promote healing, and
+            even lower blood pressure. It's nature's built-in therapy!</p>
+    </div>
+
+    <div class="section">
+        <h1>Adopt, Don't Shop 🏡</h1>
+        <p>Every cat deserves a loving home. Shelters are full of cats waiting for someone just like you. Adopt today
+            and gain a lifelong furry friend!</p>
+    </div>
+
+    <h1>FAQ</h1>
+    <div class="faq-section" id="faqSection">
+        <div class="faq">
+            <div class="faq-question">What is your return policy?</div>
+            <div class="faq-answer">We offer a 30-day return policy with a full refund if you're not satisfied with your
+                purchase.</div>
+        </div>
+        <div class="faq">
+            <div class="faq-question">How long does shipping take?</div>
+            <div class="faq-answer">Shipping usually takes 5-7 business days depending on your location.</div>
+        </div>
+        <div class="faq">
+            <div class="faq-question">Do you offer international shipping?</div>
+            <div class="faq-answer">Yes, we ship worldwide! International shipping times may vary.</div>
+        </div>
+        <div class="faq">
+            <div class="faq-question">How can I track my order?</div>
+            <div class="faq-answer">After placing an order, you'll receive a tracking number via email once it ships.
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <h1>Countdown Timer</h1>
+        <div class="countdown-section">
+            <h2>Countdown to New Year's Eve 🎉</h2>
+            <div class="timer" id="countdownTimer">
+                <div class="timer-box">
+                    <h2 id="days">00</h2>
+                    <p>Days</p>
+                </div>
+                <div class="timer-box">
+                    <h2 id="hours">00</h2>
+                    <p>Hours</p>
+                </div>
+                <div class="timer-box">
+                    <h2 id="minutes">00</h2>
+                    <p>Minutes</p>
+                </div>
+                <div class="timer-box">
+                    <h2 id="seconds">00</h2>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <!-- Slides will be added dynamically -->
+            </div>
+
+            <button class="carousel-btn" id="prevBtn">&#10094;</button>
+            <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        </div>
+
+        <div class="indicators" id="indicators">
+            <!-- Indicators will be added dynamically -->
+        </div>
+    </section>
+
+
+    <script>
+        // Scroll Progress Bar Functionality
+        window.addEventListener('scroll', function () {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            scrollProgress.style.width = `${progress}%`;
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('overlay');
+            const header = document.getElementById('mainHeader');
+
+            // Sticky Header Functionality
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            });
+
+            // Toggle mobile menu
+            hamburger.addEventListener('click', function () {
+                this.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+                overlay.classList.toggle('active');
+
+                // Prevent scrolling when menu is open
+                if (mobileMenu.classList.contains('open')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on overlay
+            overlay.addEventListener('click', function () {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Close menu when clicking on a link (optional)
+            const navLinks = document.querySelectorAll('.mobile-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    hamburger.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close menu when resizing to desktop (optional)
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    hamburger.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        const img = document.getElementById('moveImage');
+        let x = 0;
+        let y = 0;
+
+        function moveImage(direction) {
+            const moveAmount = 50; // pixels
+
+            if (direction === 'up') {
+                y -= moveAmount;
+                img.src = "photo-1573865526739-10659fec78a5.avif";
+            } else if (direction === 'down') {
+                y += moveAmount;
+                img.src = "photo-1573865526739-10659fec78a5.avif";
+            } else if (direction === 'left') {
+                x -= moveAmount;
+                img.src = "photo-1573865526739-10659fec78a5.avif";
+            } else if (direction === 'right') {
+                x += moveAmount;
+                img.src = "photo-1573865526739-10659fec78a5.avif";
+            }
+
+            img.style.transform = `translate(${x}px, ${y}px)`;
+        }
+        // Get DOM elements
+        const modalOverlay = document.getElementById('modalOverlay');
+        const openModalBtn = document.getElementById('openModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const closeModalXBtn = document.getElementById('closeModalX');
+        const modal = document.querySelector('.modal');
+
+        // Function to open modal
+        function openModal() {
+            modalOverlay.classList.add('active');
+        }
+
+        // Function to close modal
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+        }
+
+        // Event listeners
+        openModalBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        closeModalXBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside
+        modalOverlay.addEventListener('click', function (event) {
+            // Check if the click was on the overlay itself, not the modal content
+            if (event.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Prevent closing when clicking inside the modal (event propagation)
+        modal.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const birthDate = document.getElementById('birthDate').value;
+            const address = document.getElementById('address').value.trim();
+            const graduationYear = document.getElementById('graduationYear').value;
+            const married = document.querySelector('input[name="married"]:checked');
+
+            // Reset error messages
+            document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+
+            // Validate name
+            if (name === '') {
+                document.getElementById('nameError').style.display = 'block';
+                return;
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === '' || !emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                return;
+            }
+
+            // Validate phone (basic validation)
+            const phoneRegex = /^[\d\s\-()+]{10,}$/;
+            if (phone === '' || !phoneRegex.test(phone)) {
+                document.getElementById('phoneError').style.display = 'block';
+                return;
+            }
+
+            // Validate birth date
+            if (birthDate === '') {
+                document.getElementById('birthDateError').style.display = 'block';
+                return;
+            }
+
+            // Validate address
+            if (address === '') {
+                document.getElementById('addressError').style.display = 'block';
+                return;
+            }
+
+            // Validate graduation year
+            const currentYear = new Date().getFullYear();
+            if (graduationYear === '' || graduationYear < 1900 || graduationYear > currentYear + 5) {
+                document.getElementById('graduationYearError').style.display = 'block';
+                return;
+            }
+
+            // Validate marital status
+            if (!married) {
+                document.getElementById('marriedError').style.display = 'block';
+                return;
+            }
+
+            // If all validations pass
+            alert('Form submitted successfully!\nWe will contact you soon.');
+
+            // In a real application, you would submit to a server here
+            // this.submit();
+        });
+
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active from all
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active to clicked
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+
+        // Scroll to top button functionality
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) { // Show after 100px scrolling
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        const sections = document.querySelectorAll('.section');
+
+        // Create the IntersectionObserver
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Animate once
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        });
+
+        // Observe each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        const faqs = document.querySelectorAll('.faq');
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle('active');
+            });
+        });
+
+        // Countdown Timer Script
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        const targetDate = new Date('December 31, 2025 23:59:59').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const gap = targetDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const days = Math.floor(gap / day);
+            const hours = Math.floor((gap % day) / hour);
+            const minutes = Math.floor((gap % hour) / minute);
+            const seconds = Math.floor((gap % minute) / second);
+
+            daysEl.innerText = days;
+            hoursEl.innerText = hours;
+            minutesEl.innerText = minutes;
+            secondsEl.innerText = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.getElementById('carousel');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const indicatorsContainer = document.getElementById('indicators');
+
+            const catBreeds = [
+                { name: "Persian", image: "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg", description: "Persians are calm cats with luxurious coats." },
+                { name: "Siamese", image: "https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg", description: "Siamese cats are chatty and affectionate." },
+                { name: "Maine Coon", image: "https://cdn-ilbchkb.nitrocdn.com/WllOMUTxoJzqhbExyNPkiIfhtSpngzPM/assets/images/optimized/rev-6eb886d/sustainablecats.com/wp-content/uploads/2024/05/MAine-Coon-Giant.jpg", description: "Large and fluffy, Maine Coons are gentle giants." },
+                { name: "Bengal", image: "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg", description: "Bengals have wild patterns and high energy." },
+                { name: "Ragdoll", image: "https://moderncat.com/wp-content/uploads/2013/09/Ragdoll-Header_bigstock-408978611_Rawlik-1440x980.jpg", description: "Ragdolls are affectionate and relaxed." },
+                { name: "Sphynx", image: "https://cdn.pixabay.com/photo/2017/03/14/14/49/cat-2143332_1280.jpg", description: "Hairless Sphynx cats are extroverted and loving." },
+                { name: "Scottish Fold", image: "https://cdn.pixabay.com/photo/2018/01/03/19/17/cat-3059075_1280.jpg", description: "Scottish Folds have iconic folded ears." },
+                { name: "Abyssinian", image: "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_1280.jpg", description: "Abyssinians are playful and curious." },
+                { name: "Russian Blue", image: "https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg", description: "Elegant and shy, Russian Blues bond closely." },
+                { name: "British Shorthair", image: "https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg", description: "Chubby-faced British Shorthairs are super chill." }
+            ];
+
+            let currentSlide = 0;
+
+            // Create slides and indicators
+            catBreeds.forEach((cat, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                slide.innerHTML = `
+          <img src="${cat.image}" alt="${cat.name}">
+          <div class="slide-info">
+            <h2>${cat.name}</h2>
+            <p>${cat.description}</p>
+          </div>
+        `;
+                carousel.appendChild(slide);
+
+                const indicator = document.createElement('div');
+                indicator.className = 'indicator';
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            function goToSlide(slideIndex) {
+                carousel.style.transform = `translateX(-${slideIndex * 100}%)`;
+                currentSlide = slideIndex;
+                updateIndicators();
+            }
+
+            function nextSlide() {
+                if (currentSlide === catBreeds.length - 1) {
+                    goToSlide(0);
+                } else {
+                    goToSlide(currentSlide + 1);
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide === 0) {
+                    goToSlide(catBreeds.length - 1);
+                } else {
+                    goToSlide(currentSlide - 1);
+                }
+            }
+
+            function updateIndicators() {
+                const indicators = document.querySelectorAll('.indicator');
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            // Button events
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Auto-slide
+            let slideInterval = setInterval(nextSlide, 6000);
+
+            // Pause on hover
+            carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            carousel.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 6000));
+
+            // Keyboard controls
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+            });
+        });
+    </script>
+</body>
+
+</html>
