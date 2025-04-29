@@ -16,7 +16,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(90deg, #3498db, #8e44ad);
+    background: white;
     /*padding-top: 80px; Space for sticky header */
 }
 
@@ -227,6 +227,24 @@ main {
     max-width: 1200px;
     margin: 0 auto;
 }
+.container {
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .img-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }m
 
 /* Demo content to enable scrolling */
 .content-section {
@@ -239,31 +257,11 @@ main {
 }
 
 .content-section h1 {
-    color: #fff;
+    color: black
 
 }
 
 
-.content-section .image-container {
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
-    position: center;
-    margin-bottom: 30px;
-    border: 4px solid #ff00bb;
-    border-radius: 10px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-section .image-container img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
 
 .content-section .buttons {
     display: flex;
@@ -321,7 +319,7 @@ main {
     padding: 12px 24px;
     font-size: 16px;
     background-color: #4361ee;
-    color: white;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -456,15 +454,15 @@ main {
 .container {
     max-width: 800px;
     margin: 30px auto;
-    background: linear-gradient(135deg, #9b24c7 0%, #000000 100%);
+    background: white
     ;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    color: white;
+.container h1 {
+    color: black;
     text-align: center;
     margin-bottom: 30px;
     font-weight: 600;
@@ -732,8 +730,8 @@ ul.cat-list li {
 .section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    background: linear-gradient(90deg, #4361ee, #b5179e);
-    color: transparent;
+    background:white ;
+    color: black;
 }
 
 .section p {
@@ -936,6 +934,179 @@ ul.cat-list li {
     transform: scale(1.2);
 }
 
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Base styles for animatable elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Active state when element is in viewport */
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different animation delays for staggered effects */
+.fade-in.delay-1 { transition-delay: 0.2s; }
+.fade-in.delay-2 { transition-delay: 0.4s; }
+.fade-in.delay-3 { transition-delay: 0.6s; }
+
+/* Demo content styles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    max-width: 600px;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.spacer {
+    height: 150vh;
+    background: linear-gradient(#f5f5f5, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Tooltip container */
+.tooltip {
+    padding-top: 100px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* Optional: adds a dotted underline */
+    cursor: help;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the text */
+    left: 50%;
+    margin-left: -60px; /* Use half of the width to center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    font-family: Arial, sans-serif;
+}
+
+/* Dropdown button */
+.dropdown-button {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #1a1a1a;
+    color: white;
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.dropdown-button:hover, .dropdown-button:focus {
+    background-color: #333;
+    border-color: #555;
+    outline: none;
+}
+
+.dropdown-button::after {
+    content: "▼";
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.dropdown-button[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
+    margin: 10px ;
+    align-items: center;
+}
+
+.dropdown-menu[aria-hidden="false"] {
+    display: block;
+}
+
+/* Dropdown items */
+.dropdown-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #f0f0f0;
+    outline: none;
+}
+
+.dropdown-item[aria-selected="true"] {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Car brand highlights */
+.mercedes { color: #00A1B0; }
+.porsche { color: #E30000; }
+.aston-martin { color: #00594F; }
+.bmw { color: #0066B1; }
 /* Extra small fade-up animation for extra flair */
 @keyframes fadeSlideUp {
     0% {

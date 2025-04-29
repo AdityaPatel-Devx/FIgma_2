@@ -51,50 +51,53 @@
 
     <!-- Main Content -->
     <main>
-        <div class="content-section">
-            <h1>Image Move and Change</h1>
-            <div class="image-container">
-                <img id="moveImage" src="photo-1573865526739-10659fec78a5.avif" alt="Move Image">
-            </div>
-
-            <div class="buttons">
-                <button class="shiny-button" onclick="moveImage('up')">Up</button>
-                <button class="shiny-button" onclick="moveImage('down')">Down</button>
-                <button class="shiny-button" onclick="moveImage('left')">Left</button>
-                <button class="shiny-button" onclick="moveImage('right')">Right</button>
-            </div>
-        </div>
-
         <div class="container">
-            <h1>Modal Popup Example</h1>
-            <p>Click the button below to open the modal</p>
-            <button class="open-button" id="openModal">Open Modal</button>
-        </div>
+            <h1>Responsive Image Example</h1>
 
-        <!-- Modal Overlay -->
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal">
-                <div class="modal-header">
-                    <h2 class="modal-title">Modal Title</h2>
-                    <button class="close-button" id="closeModalX">&times;</button>
+            <!-- Basic responsive image -->
+            <div class="img-wrapper">
+                <img src="photo-1573865526739-10659fec78a5.avif" alt="Responsive image" class="responsive-img">
+            </div>
+            <div class="content-section">
+                <h1>Shine Button</h1>
+                <div class="buttons">
+                    <button class="shiny-button" onclick="moveImage('up')">Up</button>
+                    <button class="shiny-button" onclick="moveImage('down')">Down</button>
+                    <button class="shiny-button" onclick="moveImage('left')">Left</button>
+                    <button class="shiny-button" onclick="moveImage('right')">Right</button>
                 </div>
-                <div class="modal-body">
-                    <div class="modal-content">
-                        <p>This is a modal popup that appears when you click the button.</p>
-                        <p>You can close it by:</p>
-                        <ul>
-                            <li>Clicking the X button</li>
-                            <li>Clicking outside the modal</li>
-                            <li>Clicking the Close button below</li>
-                        </ul>
+            </div>
+
+            <div class="container">
+                <h1>Modal Popup Example</h1>
+                <p>Click the button below to open the modal</p>
+                <button class="open-button" id="openModal">Open Modal</button>
+            </div>
+
+            <!-- Modal Overlay -->
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Modal Title</h2>
+                        <button class="close-button" id="closeModalX">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-content">
+                            <p>This is a modal popup that appears when you click the button.</p>
+                            <p>You can close it by:</p>
+                            <ul>
+                                <li>Clicking the X button</li>
+                                <li>Clicking outside the modal</li>
+                                <li>Clicking the Close button below</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="modal-button secondary" id="closeModal">Close</button>
+                        <button class="modal-button">Confirm</button>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="modal-button secondary" id="closeModal">Close</button>
-                    <button class="modal-button">Confirm</button>
-                </div>
             </div>
-        </div>
     </main>
     <div class="container">
         <h1>Personal Information Form</h1>
@@ -197,25 +200,26 @@
     </div>
 
     <button id="scrollTopBtn"></button>
+    <p>put the arrow on it <span class="tooltip">Tooltip word is highlighted<span class="tooltiptext">This is a
+                tooltip!</span></span> to see the tooltip.</p>
 
+    <section>
+        <h1 class="fade-in">Scroll Down to See Animation</h1>
+        <p class="fade-in delay-1">Elements will fade in as they enter the viewport</p>
+    </section>
 
-    <div class="section">
-        <h1>Welcome to the Cat Universe 🐱</h1>
-        <p>Cats have been our mysterious and adorable companions for thousands of years. From their silky fur to their
-            playful antics, they bring joy to millions across the globe.</p>
-    </div>
+    <section>
+        <h1 class="fade-in">Content Section 1</h1>
+        <p class="fade-in delay-1">This text fades in when visible</p>
+        <p class="fade-in delay-2">With a slight delay for a staggered effect</p>
+    </section>
 
-    <div class="section">
-        <h1>The Power of a Purr 💖</h1>
-        <p>A cat's purr is more than just a cute sound. Studies show it can help reduce stress, promote healing, and
-            even lower blood pressure. It's nature's built-in therapy!</p>
-    </div>
+    <section>
+        <h1 class="fade-in">Content Section 2</h1>
+        <p class="fade-in delay-1">Works with any element you want to animate</p>
+        <p class="fade-in delay-2">Try adding your own content!</p>
+    </section>
 
-    <div class="section">
-        <h1>Adopt, Don't Shop 🏡</h1>
-        <p>Every cat deserves a loving home. Shelters are full of cats waiting for someone just like you. Adopt today
-            and gain a lifelong furry friend!</p>
-    </div>
 
     <h1>FAQ</h1>
     <div class="faq-section" id="faqSection">
@@ -277,6 +281,22 @@
         <div class="indicators" id="indicators">
             <!-- Indicators will be added dynamically -->
         </div>
+    </section>
+    <section class="dropdown">
+        <button class="dropdown-button" aria-expanded="false" aria-haspopup="listbox">
+            Select a car
+        </button>
+
+        <ul class="dropdown-menu" aria-hidden="true" role="listbox" tabindex="-1">
+            <li class="dropdown-item mercedes" role="option" data-value="amg-one" tabindex="0">Mercedes-AMG One</li>
+            <li class="dropdown-item porsche" role="option" data-value="gt3rs" tabindex="0">Porsche 911 GT3 RS</li>
+            <li class="dropdown-item aston-martin" role="option" data-value="db12" tabindex="0">Aston Martin DB12</li>
+            <li class="dropdown-item bmw" role="option" data-value="m5" tabindex="0">BMW M5 Competition</li>
+            <li class="dropdown-item" role="option" data-value="huracan" tabindex="0">Lamborghini Huracán STO</li>
+            <li class="dropdown-item" role="option" data-value="sf90" tabindex="0">Ferrari SF90 Stradale</li>
+            <li class="dropdown-item" role="option" data-value="aventador" tabindex="0">Lamborghini Aventador SVJ</li>
+            <li class="dropdown-item" role="option" data-value="taycan" tabindex="0">Porsche Taycan Turbo S</li>
+        </ul>
     </section>
 
 
@@ -513,18 +533,36 @@
             });
         });
         const sections = document.querySelectorAll('.section');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select all elements with the fade-in class
+            const fadeElements = document.querySelectorAll('.fade-in');
 
-        // Create the IntersectionObserver
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Animate once
-                }
+            // Create the Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add the active class when element is in viewport
+                        entry.target.classList.add('active');
+
+                        // Optional: Unobserve after animation to improve performance
+                        // observer.unobserve(entry.target);
+                    } else {
+                        // Optional: Remove the class if you want animation to repeat
+                        // entry.target.classList.remove('active');
+                    }
+                });
+            }, {
+                // Adjust the root margin and threshold as needed
+                rootMargin: '0px 0px -100px 0px',
+                threshold: 0.1
             });
-        }, {
-            threshold: 0.2 // Trigger when 20% of the element is visible
+
+            // Observe each fade-in element
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
         });
+
 
         // Observe each section
         sections.forEach(section => {
@@ -659,6 +697,94 @@
                 if (e.key === 'ArrowRight') nextSlide();
                 if (e.key === 'ArrowLeft') prevSlide();
             });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownButton = document.querySelector('.dropdown-button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            let selectedIndex = -1;
+
+            // Toggle dropdown visibility
+            dropdownButton.addEventListener('click', function () {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                dropdownMenu.setAttribute('aria-hidden', isExpanded);
+
+                if (!isExpanded) {
+                    dropdownMenu.focus();
+                }
+            });
+
+            // Handle keyboard navigation
+            dropdownButton.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === 'Enter') {
+                    e.preventDefault();
+
+                    // Open menu if closed
+                    if (this.getAttribute('aria-expanded') === 'false') {
+                        this.setAttribute('aria-expanded', 'true');
+                        dropdownMenu.setAttribute('aria-hidden', 'false');
+                    }
+
+                    // Move focus to menu
+                    if (e.key === 'Enter') {
+                        dropdownItems[0].focus();
+                    } else if (e.key === 'ArrowDown') {
+                        selectedIndex = 0;
+                        dropdownItems[selectedIndex].focus();
+                    } else if (e.key === 'ArrowUp') {
+                        selectedIndex = dropdownItems.length - 1;
+                        dropdownItems[selectedIndex].focus();
+                    }
+                }
+            });
+
+            // Handle item selection and keyboard navigation in menu
+            dropdownItems.forEach((item, index) => {
+                item.addEventListener('click', function () {
+                    selectItem(this);
+                });
+
+                item.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        selectItem(this);
+                    } else if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        selectedIndex = (index + 1) % dropdownItems.length;
+                        dropdownItems[selectedIndex].focus();
+                    } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        selectedIndex = (index - 1 + dropdownItems.length) % dropdownItems.length;
+                        dropdownItems[selectedIndex].focus();
+                    } else if (e.key === 'Escape') {
+                        dropdownButton.setAttribute('aria-expanded', 'false');
+                        dropdownMenu.setAttribute('aria-hidden', 'true');
+                        dropdownButton.focus();
+                    }
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownButton.setAttribute('aria-expanded', 'false');
+                    dropdownMenu.setAttribute('aria-hidden', 'true');
+                }
+            });
+
+            function selectItem(item) {
+                dropdownButton.textContent = item.textContent;
+                dropdownButton.setAttribute('aria-expanded', 'false');
+                dropdownMenu.setAttribute('aria-hidden', 'true');
+
+                // Update aria-selected status
+                dropdownItems.forEach(i => i.setAttribute('aria-selected', 'false'));
+                item.setAttribute('aria-selected', 'true');
+
+                dropdownButton.focus();
+                console.log('Selected car:', item.getAttribute('data-value'));
+            }
         });
     </script>
 </body>
